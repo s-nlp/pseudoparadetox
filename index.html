@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta name="description" content="PseudoParaDetox: Generating High-Quality Detoxification Data with Abliterated LLMs">
+  <meta property="og:title" content="PseudoParaDetox: LLMs for Text Detoxification"/>
+  <meta property="og:description" content="Exploring the potential of modern open source LLMs to annotate parallel data for text detoxification"/>
+  <meta property="og:url" content="https://s-nlp.github.io/pseudoparadetox/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
@@ -25,7 +25,7 @@
 
 
   <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/sk.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -139,7 +139,7 @@
   </div>
 </section>
 
-<section class="section hero is-light">
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -202,8 +202,9 @@
   }
 </style>
 
-<section class="hero is-small">
+<section class="hero is-light">
   <div class="hero-body">
+    <h2 class="title is-3 has-text-centered">Results</h2> <!-- Corrected the <Results> tag -->
     <div class="container">
       <div class="image-row">  
         <div class="image-container-2">
@@ -215,7 +216,7 @@
       </div>
       <div class="image-row">  
         <div class="image-container-2">
-          <img src="static/images/results_manual.png" alt="PseudoParadetox: Results of Automatic Evaluation.">
+          <img src="static/images/results_manual.png" alt="PseudoParadetox: Results of Manual Evaluation.">
           <h2 class="subtitle has-text-centered">
             Results of manual detoxification evaluation after training BART on the original ParaDetox data (highlighted in <span style="background-color:lightgray;">gray</span>) and generated with LLMs PseudoParaDetox data in 0-shot and 10-shot settings. A.P. stands for Activation Patched models, <span style="text-decoration:line-through;">X</span> stands for models used <em>as is</em>. Best results for each setting (0-shot/10-shot) are <strong>bold</strong>, and the best overall results are <strong><u>underlined bold</u></strong>.
           </h2>
@@ -224,6 +225,7 @@
     </div>
   </div>
 </section>
+
 
 <style>
   .image-row {
@@ -247,6 +249,7 @@
 
 <section class="hero is-small">
   <div class="hero-body">
+    <h2 class="title is-3 has-text-centered">Side-by-Side Evaluations</h2> <!-- Corrected the <Results> tag -->
     <div class="container">
       <div class="image-row">
         <!-- <div class="image-container">
@@ -296,12 +299,29 @@
 </style>
 
 
-<section class="hero is-small">
+<section class="hero is-light">
+  <div class="hero-body">
+    <h2 class="title is-3 has-text-centered">Text Output Examples</h2> <!-- Corrected the <Results> tag -->
+    <div class="container">
+      <div class="image-row">  
+        <div class="image-container-3">
+          <img src="static/images/text_examples_8b.png" alt="Second Image Description">
+          <h2 class="subtitle has-text-centered">
+            Examples of text detoxification on a private test set of ParaDetox for 8B Llama 3 models. Original toxic sentence is highlighted with <span style="background-color:lightpink;">pink</span>, Human Reference detoxification is highlighted with <span style="background-color:lightgreen;">green</span>.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light">
   <div class="hero-body">
     <div class="container">
       <div class="image-row">  
         <div class="image-container-3">
-          <img src="static/images/text_examples.png" alt="Second Image Description">
+          <img src="static/images/text_examples_70b.png" alt="Second Image Description">
           <h2 class="subtitle has-text-centered">
             Examples of text detoxification on a private test set of ParaDetox for 70B Llama 3 models. Original toxic sentence is highlighted with <span style="background-color:lightpink;">pink</span>, Human Reference detoxification is highlighted with <span style="background-color:lightgreen;">green</span>.
           </h2>
