@@ -33,7 +33,7 @@ Meta-Llama-3-8B-Instruct-abliterated-v3](https://huggingface.co/failspy/Meta-Lla
 
 Next, you need to generate synthetic non-toxic data with patched model
 
-```console
+```bash
 for lang in en
 do
     python detoxer.py --language $lang --model_path "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated" \
@@ -45,17 +45,24 @@ done
 In order to check the quality of synthetic data we train two Seq2Seq models with real and synthetic data.
 
 To train BART-large with real data:
-```console
+```bash
 python src/bart_baseline.py --config_path configs/bart_real_train.json --input_columns en_toxic_comment --output_columns en_neutral_sentence
 ```
 
 To train BART-large with synth data:
-```console
+```bash
 python src/bart_baseline.py --config_path configs/bart_synth_train.json --input_columns en_toxic_comment --output_columns generated_neutral_sentence
 ```
 
 For validate both BART models:
 
+```bash
+python ./src/utils/evaluate.py \
+    --source_list path/to/test/ \
+    --references_list path/to/test/  \
+    --input_path /results/generated/Meta-Llama-3-8B-Instruct-abliterated-v3.5_10shot_t08_p09.txt \
+    --output_dir /results/generated.results
+```
 
 ## Test data
 
